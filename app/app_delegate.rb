@@ -10,6 +10,9 @@ class AppDelegate
     @window.rootViewController = navigationController
     @window.makeKeyAndVisible
 
+    Leanplum.setDeviceId(ASIdentifierManager.sharedManager.advertisingIdentifier.UUIDString)
+    Leanplum.setAppId(ENV['APP_ID'], withDevelopmentKey: ENV['KEY'])
+
 
     true
   end
