@@ -12,10 +12,13 @@ Motion::Project::App.setup do |app|
   # Use `rake config' to see complete project settings.
   app.name = 'leanplum_test'
 
-  # In Leanplum > 1.4, uncomment this line:
-  # app.embedded_frameworks = ['vendor/Pods/Leanplum-iOS-SDK/Leanplum.framework']
+  if File.exists? 'vendor/Pods/Leanplum-iOS-SDK/Leanplum.framework'
+    app.embedded_frameworks = [
+      'vendor/Pods/Leanplum-iOS-SDK/Leanplum.framework',
+    ]
+  end
 
   app.pods do
-    pod 'Leanplum-iOS-SDK', '1.3.12'
+    pod 'Leanplum-iOS-SDK', '2.0.2'
   end
 end
