@@ -14,6 +14,8 @@ class AppDelegate
     Leanplum.setAppId(ENV['APP_ID'], withDevelopmentKey: ENV['KEY'])
 
 
+    LeanplumUIEditor.sharedEditor.allowInterfaceEditing
+
     $top_screen = UIViewController.alloc.initWithNibName(nil, bundle: nil)
     $top_screen = ProMotion::ViewController.new
     $top_screen.view.backgroundColor = UIColor.whiteColor
