@@ -22,3 +22,5 @@ Motion::Project::App.setup do |app|
     pod 'Leanplum-iOS-SDK', '2.0.2'
   end
 end
+
+Dir.glob('tasks/*.rake').each { |r| load r}
