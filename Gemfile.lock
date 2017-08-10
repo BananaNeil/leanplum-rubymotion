@@ -2,6 +2,9 @@ GEM
   remote: https://rubygems.org/
   specs:
     CFPropertyList (2.3.4)
+    ProMotion (2.6.1)
+      methadone (~> 1.7)
+      motion_print (~> 1.0)
     activesupport (4.2.7.1)
       i18n (~> 0.7)
       json (~> 1.7, >= 1.7.7)
@@ -48,10 +51,13 @@ GEM
     gh_inspector (1.0.2)
     i18n (0.7.0)
     json (1.8.3)
+    methadone (1.9.5)
+      bundler
     minitest (5.9.1)
     molinillo (0.5.4)
     motion-cocoapods (1.8.1)
       cocoapods (>= 1.0.0)
+    motion_print (1.2.0)
     nanaimo (0.2.2)
     nap (1.1.0)
     netrc (0.7.8)
@@ -70,9 +76,10 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  ProMotion (~> 2.0)
   cocoapods (= 1.1.1)
   motion-cocoapods
   rake
 
 BUNDLED WITH
-   1.10.3
+   1.15.0

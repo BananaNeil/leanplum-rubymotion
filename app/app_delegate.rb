@@ -6,13 +6,18 @@ class AppDelegate
 
     navigationController = UINavigationController.alloc.initWithRootViewController(rootViewController)
 
-    @window = UIWindow.alloc.initWithFrame(UIScreen.mainScreen.bounds)
-    @window.rootViewController = navigationController
-    @window.makeKeyAndVisible
+    $window = UIWindow.alloc.initWithFrame(UIScreen.mainScreen.bounds)
+    $window.rootViewController = navigationController
+    $window.makeKeyAndVisible
 
     Leanplum.setDeviceId(ASIdentifierManager.sharedManager.advertisingIdentifier.UUIDString)
     Leanplum.setAppId(ENV['APP_ID'], withDevelopmentKey: ENV['KEY'])
 
+
+    $top_screen = UIViewController.alloc.initWithNibName(nil, bundle: nil)
+    $top_screen = ProMotion::ViewController.new
+    $top_screen.view.backgroundColor = UIColor.whiteColor
+    navigationController.pushViewController($top_screen, animated: true)
 
     true
   end
